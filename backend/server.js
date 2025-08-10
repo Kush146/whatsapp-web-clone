@@ -11,12 +11,15 @@ const port = process.env.PORT || 5001;
 
 app.use(cors({
   origin: [
-    'http://localhost:3000', // for local dev
-    'https://whatsapp-web-clone-pfu95kc6p-kushs-projects-190f8a86.vercel.app', // your Vercel frontend URL
+    'http://localhost:3000',
+    'https://whatsapp-web-clone-beta-ivory.vercel.app',                 // current prod
+    'https://whatsapp-web-clone-git-main-kushs-projects-190f8a86.vercel.app', // optional alias
+    'https://whatsapp-web-clone-bzfd6sjp0-kushs-projects-190f8a86.vercel.app' // optional alias
   ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET','POST','PUT','DELETE'],
   credentials: true
 }));
+
 app.use(bodyParser.json());
 
 // MongoDB connection (modern call – no deprecated options)
